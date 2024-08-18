@@ -4,7 +4,7 @@ import React from 'react'
 const App = () => {
   return (
     <View>
-      Google
+      <Text>See you tmrw</Text>
     </View>
   )
 }
