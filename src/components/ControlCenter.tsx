@@ -11,11 +11,11 @@ const ControlCenter = () => {
 
     // Next Button
     const skipToNext = async () => {
-        await TrackPlayer.skipToNext;
+        await TrackPlayer.skipToNext();
     }
     // Previous Button
     const skipToPrevious = async () => {
-        await TrackPlayer.skipToPrevious;
+        await TrackPlayer.skipToPrevious();
     }
     //Stop Button
     const togglePlayback = async (playback: State) => {
@@ -34,7 +34,6 @@ const ControlCenter = () => {
 
   return (
     <View style={styles.container}>
-      <Text>ControlCenter</Text>
       <Pressable onPress={skipToPrevious}>
         <Icon name='skip-previous' size={40} style={styles.icon} />
       </Pressable>
@@ -46,7 +45,7 @@ const ControlCenter = () => {
         }}
       >        
         <Icon 
-            name={playBackState?.state === State.Playing ? "pause" : "play"} 
+            name={playBackState?.state === State.Playing ? "pause" : "play-arrow"} 
             size={75} 
             style={styles.icon} 
         />

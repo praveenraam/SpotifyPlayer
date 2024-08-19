@@ -1,86 +1,51 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# SpotifyApp
+**SpotifyApp** is a simple local music player built using React Native. This app provides basic functionalities to play, pause, skip to the next track, and go back to the previous track. It’s a minimalistic music player designed to demonstrate the core features of a media player in a mobile app.
 
-# Getting Started
+## Features
+- Play/Pause: Easily control the playback of your music.
+- Next/Previous: Skip to the next track or go back to the previous one.
+## Installation
+1.Clone the repository:
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+```bash 
+git clone https://github.com/praveenraam/SpotifyPlayer.git
 
-## Step 1: Start the Metro Server
-
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
-
-To start Metro, run the following command from the _root_ of your React Native project:
+cd spotifyapp
+```
+2.Install dependencies:
 
 ```bash
-# using npm
-npm start
-
-# OR using Yarn
-yarn start
+npm install
 ```
 
-## Step 2: Start your Application
+3.Run the app:
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
-
+- For Android:
 ```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
+npm run-android
 ```
-
-### For iOS
-
+- For iOS:
 ```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
+npm run-ios
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+## Getting Started
+This project was developed by following a [YouTube tutorial by Hitesh](https://youtu.be/yqMKsKzUanU?si=Voer8QlPEioRJp5Z). It’s a basic version of a music player app, and a great starting point if you're looking to understand how to manage media playback in React Native.
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+## Screenshots
+![App Screenshot](README/imgs/1.png) <br>
 
-## Step 3: Modifying your App
+![alt text](README/imgs/2.png)
+## How It Works
+- The app uses react-native-track-player to manage audio playback.
+- Buttons for play, pause, next, and previous control the playback.
+## Future Improvements
+This is a basic version of the app. Future versions may include better Features:
 
-Now that you have successfully run the app, let's modify it.
+## Credits
+- [Hitesh's YouTube](https://www.youtube.com/@HiteshCodeLab) Tutorial: This project was inspired and guided by the tutorial from Hitesh on YouTube.
+## License
+This project is licensed under the MIT License.
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
-
-
-# For reference purposes
-
-In case if you have any issues in setting.gradle while running in android, try using ``npm run android --verbose`` to run the application during the development. 
-
-If **The development server returned response error code: 500** was your error, make sure there no error in your code while running the command.
+## For reference purposes
+In case if you have any issues in setting.gradle while running in android, try using ``npm run android --verbose`` to run the application during the development.
