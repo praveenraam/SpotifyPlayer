@@ -1,43 +1,53 @@
-import { ActivityIndicator, SafeAreaView, StyleSheet, Text, View } from 'react-native'
-import React, {useState,useEffect} from 'react'
-import { setupPlayer, addTrack } from '../musicPlayerServices'
+import {
+  ActivityIndicator,
+  SafeAreaView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
+import React, {useState, useEffect} from 'react';
+import {setupPlayer, addTrack} from '../musicPlayerServices';
+import ControlCenter from './components/ControlCenter';
+import SongSlider from './components/SongSlider';
+import MusicPlayer from './screens/MusicPlayer';
 
-const App = ():JSX.Element => {
-
-  const [isPlayerReady,setIsPlayerReady] = useState(false);
+const App = (): JSX.Element => {
+  const [isPlayerReady, setIsPlayerReady] = useState(false);
 
   async function setup() {
-    let isSetup  = await setupPlayer();
+    let isSetup = await setupPlayer();
 
-    if(isSetup){
+    if (isSetup) {
       await addTrack();
     }
 
     setIsPlayerReady(isSetup);
   }
 
-  useEffect(()=>{
-    setup()
-  })
+  useEffect(() => {
+    setup();
+  });
 
-  if(!isPlayerReady){
+  if (!isPlayerReady) {
     return (
       <SafeAreaView>
         <ActivityIndicator />
       </SafeAreaView>
-    )
+    );
   }
   return (
-    <View>
-      <Text>See you tmrw</Text>
+    <View style={styles.container}>
+      <StatusBar barStyle={'dark-content'} />
+      <MusicPlayer />
     </View>
-  )
-}
+  );
+};
 
-export default App
+export default App;
 
 const styles = StyleSheet.create({
-  container:{
-    flex:1
-  }
-})
+  container: {
+    flex: 1,
+  },
+});
